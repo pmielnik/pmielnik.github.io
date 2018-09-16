@@ -1,0 +1,257 @@
+*
+{
+  margin:0;
+  padding:0;
+  border: none;
+  outline: none;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Old Standard TT', serif;
+    color: #383d57;
+    background: #ffffff
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 40px;
+    color: #383d57;
+    padding-bottom: 10%;
+    padding-top: 30px;
+}
+
+h2 {
+    font-family:'Open Sans', sans-serif;
+    font-weight: lighter;
+    color: #383d57;
+}
+
+h3 {
+    font-family:'Open Sans', sans-serif;
+    font-weight: lighter;
+    color: #383d57
+}
+
+p {
+    font-family:'Open Sans', sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+    color: #383d57;
+    padding-bottom: 5px;
+}
+
+.header {
+    text-align: right;
+    color: #383d57;
+    background-image: url(Images/IMG_7670.jpg);
+    background-attachment: fixed;
+    position: relative;
+    min-height: 300px;
+    min-width: auto;
+    width: auto;
+    height: 100vh;
+    background-size: cover;
+}
+
+.header h1 {
+    text-align: right;
+    text-shadow: 0px 2px 10px #8999a5;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 8vh;
+    padding-top: 8vh;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.header h2 {
+    color: #4c341f;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 0px;
+    font-size: 4vh;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #4e6b81;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    padding: 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar a:hover {
+    color: #224155;
+    background-color: #7c9ab2;
+}
+
+.about {
+    padding: 10%;
+    text-align: center;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10%;
+    justify-content: center;
+}
+
+.projects h2 {
+    font-size: 20px;
+    font-weight: lighter;
+    text-decoration: none;
+    padding-left: 0px;
+}
+
+.projects img {
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+
+.proj {
+    margin-bottom: 8px;
+    width: calc(25% - 5px);
+    text-decoration: none;
+    color: #383d57;
+}
+
+.proj h2:hover{
+    color: #7c9ab2;
+}
+
+.education {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.school {
+    text-align: center;
+    padding: 5%;
+}
+
+.sociallinks {
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.sociallinks p {
+    text-align: center;
+    text-decoration: none;
+    color: #383d57;
+}
+
+.sociallinks img {
+    width: 3%;
+    height: auto;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+}
+
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10%;
+    justify-content: center;
+}
+
+.job {
+    padding-top: 0;
+    text-align: center;
+}
+
+.job h1, h2 {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+}
+
+.job img {
+    width: 20%;
+    height: auto;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+
+/* popup stuff */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h1 {
+  margin-top: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  text-align: left;
+  font-size: 30px;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #383d57;
+}
+.popup .close:hover {
+  color: #4e6b81;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .popup{
+    width: 70%;
+  }
+}
