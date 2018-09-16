@@ -12,7 +12,7 @@ body{
     font-family: 'Playfair Display', serif;
     font-family: 'Old Standard TT', serif;
     color: #383d57;
-    background: #ffffff
+    background: #ffffff;
 }
 
 h1 {
@@ -22,7 +22,7 @@ h1 {
     font-size: 40px;
     color: #383d57;
     padding-bottom: 10%;
-    padding-top: 30px;
+    padding-top: 8vh;
 }
 
 h2 {
@@ -83,6 +83,8 @@ p {
     background-color: #4e6b81;
     width: 100%;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 .navbar a {
