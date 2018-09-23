@@ -19,7 +19,7 @@ h1 {
     font-family: 'Playfair Display', serif;
     font-weight: lighter;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     color: #383d57;
     padding-bottom: 10%;
     padding-top: 8vh;
@@ -44,6 +44,43 @@ p {
     color: #383d57;
     padding-bottom: 5px;
 }
+
+a {
+    font-family:'Open Sans', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    color: #224155
+}
+
+/************* coloured block components ************/
+
+.colour {
+    background: #7c9ab2;
+    background: linear-gradient(180deg, rgba(78,107,129,1) 5%, rgba(255,255,255,1) 100%);
+    height: 100vh;
+}
+
+.colour h1 {
+    color: #ffffff;
+}
+
+.colour p {
+    color: #ffffff;
+}
+
+.colour h2 {
+    color: #ffffff;
+}
+
+.colour h3 {
+    color: #ffffff;
+}
+
+.endColour {
+    background: linear-gradient(0deg, rgba(78,107,129,1) 0%, rgba(255,255,255,1) 90%);
+}
+
+/************* header components *************/
 
 .header {
     text-align: right;
@@ -78,13 +115,16 @@ p {
     letter-spacing: 2px;
 }
 
+/************ navbar components ************/ 
 .navbar {
     overflow: hidden;
     background-color: #4e6b81;
     width: 100%;
     text-align: center;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 .navbar a {
@@ -101,47 +141,18 @@ p {
 }
 
 .navbar a:hover {
-    color: #224155;
-    background-color: #7c9ab2;
+    color: #4e6b81;
+    background-color: #e5eff7;
 }
+
+/************* about components *************/
 
 .about {
     padding: 10%;
     text-align: center;
 }
 
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    padding-top: 10px;
-    padding-bottom: 10%;
-    justify-content: center;
-}
-
-.projects h2 {
-    font-size: 20px;
-    font-weight: lighter;
-    text-decoration: none;
-    padding-left: 0px;
-}
-
-.projects img {
-    vertical-align: middle;
-    padding-bottom: 5px;
-}
-
-.proj {
-    margin-bottom: 8px;
-    width: calc(25% - 5px);
-    text-decoration: none;
-    color: #383d57;
-}
-
-.proj h2:hover{
-    color: #7c9ab2;
-}
+/************ education components ************/
 
 .education {
     display: flex;
@@ -153,12 +164,134 @@ p {
 
 .school {
     text-align: center;
+    width: 40%;
+}
+
+.school img {
+    width:auto;
+    height:auto;
+    max-height:30%;
+    max-width:30%;
+    vertical-align: middle;
+}
+
+/************* projects components *************/
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+}
+
+.projects h2 {
+    font-size: 20px;
+    font-weight: lighter;
+    text-decoration: none;
+    padding-left: 0px;
+}
+
+.proj {
+    position: relative;
+    width: 30%;
+    padding-bottom: 30%;
+    color: #383d57;
+}
+
+.proj p {
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+}
+
+.projContent {
+    position: absolute;
+    height: 90%;
+    width: 90%;
     padding: 5%;
 }
 
+.projContent img {
+    width: auto;
+    height: auto;
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.projOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #4e6b81;
+}
+  
+.proj:hover .projOverlay {
+    opacity: 1;
+}
+
+/************ experience components ************/
+
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10%;
+    justify-content: center;
+}
+
+.job {
+    padding-top: 0;
+    text-align: center;
+}
+
+
+.job h1 {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.job img {
+    width: 20%;
+    height: auto;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+
+/************ accomplishment components ************/
+
+.accomplishment {
+    margin-bottom: 10%;
+    width: 30%;
+    text-decoration: none;
+    color: #383d57;
+}
+
+.accomplishment h2:hover{
+    color: #7c9ab2;
+    color: #4e6b81
+}
+
+/************ social components ************/
+
 .sociallinks {
     text-align: center;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
+    padding-top: 10%;
+}
+
+.sociallinks h1 {
+    padding-top: 0%;
 }
 
 .sociallinks p {
@@ -175,31 +308,7 @@ p {
     padding-top: 2%;
 }
 
-.experience {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 10%;
-    justify-content: center;
-}
-
-.job {
-    padding-top: 0;
-    text-align: center;
-}
-
-.job h1, h2 {
-    font-family: 'Open Sans', sans-serif;
-    padding: 0;
-}
-
-.job img {
-    width: 20%;
-    height: auto;
-    vertical-align: middle;
-    padding-bottom: 5px;
-}
-
-/* popup stuff */
+/*********** popup stuff ***********/
 
 .overlay {
   position: fixed;
