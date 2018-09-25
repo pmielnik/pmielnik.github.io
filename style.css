@@ -275,11 +275,18 @@ a {
     width: 30%;
     text-decoration: none;
     color: #383d57;
+    transition: all 0.3s;
 }
 
-.accomplishment h2:hover{
-    color: #7c9ab2;
-    color: #4e6b81
+.accomplishment:hover img{
+    transition: all 0.3s;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+
+.accomplishment:hover h2, .accomplishment:hover h3{
+    transition: all 0.3s;
+    color: #99c0e0;
 }
 
 /************ social components ************/
